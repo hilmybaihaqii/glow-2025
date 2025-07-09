@@ -30,6 +30,7 @@ body {
     color: var(--text-main);
     line-height: 1.7;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 /* Page Width & Spacing Control */
@@ -97,17 +98,6 @@ body {
     right: 5vw;
     animation-delay: 1s;
     animation-duration: 16s;
-}
-
-.blob5 {
-    width: 550px;    /* Ukuran sedikit disesuaikan */
-    height: 550px;
-    bottom: -10vh;   /* Jarak dari bawah dikurangi drastis */
-    right: -10vw;    /* Jarak dari kanan dikurangi drastis */
-    opacity: 0.15;   /* Opacity disamakan agar serasi */
-    animation-delay: 2s;
-    animation-duration: 25s;
-    animation-direction: alternate;
 }
 
 /* Navbar */

@@ -15,13 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.classList.remove('active');
     }));
 
-    // Intersection Observer for fade-in effect (No changes needed here)
+    // Intersection Observer for fade-in effect 
     const teamMembers = document.querySelectorAll('.team-member');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
@@ -30,9 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(member);
     });
 
- 
+    // Scroll to Top Button Logic
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 200) { 
+        if (window.pageYOffset > 200) { // Show button after scrolling 200px
             scrollToTopBtn.classList.add('visible');
         } else {
             scrollToTopBtn.classList.remove('visible');

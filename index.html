@@ -13,14 +13,16 @@
 <body>
 
     <header class="navbar-wrapper">
-        <nav class="navbar">
+        <nav class="navbar container">
             <a href="#hero" class="nav-logo">
                 <img src="./assets/images/logo.png" alt="Our Team's Story Logo">
             </a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#hero" class="nav-link">Start</a></li>
                 <li class="nav-item"><a href="#context" class="nav-link">Context</a></li>
+                <li class="nav-item"><a href="#cloud-computing" class="nav-link">Cloud</a></li>
                 <li class="nav-item"><a href="#team" class="nav-link">The Team</a></li>
+                <li class="nav-item"><a href="#find-us" class="nav-link">Find Us</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -31,7 +33,7 @@
     </header>
 
     <main>
-         <div class="blob blob1">
+        <div class="blob blob1">
             <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" width="100%" id="blobSvg">
                 <path d="M441,292.5Q429,335,405,373Q381,411,343,425Q305,439,277.5,441Q250,443,212,453Q174,463,138,443.5Q102,424,77,394Q52,364,30.5,329.5Q9,295,27,260Q45,225,48,188Q51,151,77,121Q103,91,141,75.5Q179,60,214.5,48.5Q250,37,286,37.5Q322,38,360,54Q398,70,419.5,103.5Q441,137,446,193.5Q451,250,441,292.5Z" fill="#f39c12"></path>
             </svg>
@@ -43,109 +45,264 @@
         </div>
 
         <section id="hero">
-            <div class="hero-content">
+            <div class="container hero-content">
                 <h1>More than just a team. <br>We are a <span class="underline-handdrawn">story</span> in the making.</h1>
                 <p>A collaborative introduction from three students united by the Glow 2025 program, eager to learn and create.</p>
             </div>
         </section>
 
         <section id="context">
-            <div class="context-content">
-                <h2>About This Initiative</h2>
-                <p>
-                    This website is part of the <strong>Glow 2025</strong> program, where we, as international class students, explored the subject of <strong>Cloud Computing</strong>.
-                </p>
-                <p class="guidance-text">This initiative was guided by our esteemed lecturers:</p>
-                <div class="lecturers">
-                    <div class="lecturer-card">
-                        <div class="lecturer-photo">
-                            <img src="./assets/images/Malaysia.png" alt="Photo of Ts. Puan Rajina">
+            <div class="container">
+                <div class="context-content">
+                    <h2>About This Initiative</h2>
+                    <p>
+                        This website is part of the <strong>Glow 2025</strong> program, where we, as international class students, explored the subject of <strong>Cloud Computing</strong>.
+                    </p>
+                    <p class="guidance-text">This initiative was guided by our esteemed lecturers:</p>
+                    <div class="lecturers">
+                        <div class="lecturer-card">
+                            <div class="lecturer-photo">
+                                <img src="./assets/images/Malaysia.png" alt="Photo of Ts. Puan Rajina">
+                            </div>
+                            <h3>Ts. Puan Rajina Binti M A Raj Mohamed</h3>
+                            <p class="lecturer-role">International Speaker</p>
+                            <p class="lecturer-affiliation">Universiti Tenaga Nasional (UNITEN), Malaysia</p>
                         </div>
-                        <h3>Ts. Puan Rajina Binti M A Raj Mohamed</h3>
-                        <p class="lecturer-role">International Speaker</p>
-                        <p class="lecturer-affiliation">Universiti Tenaga Nasional (UNITEN), Malaysia</p>
-                    </div>
-                    <div class="lecturer-card">
-                        <div class="lecturer-photo">
-                            <img src="./assets/images/indonesia.png" alt="Photo of Suryo Adhiwibowo">
+                        <div class="lecturer-card">
+                            <div class="lecturer-photo">
+                                <img src="./assets/images/indonesia.png" alt="Photo of Suryo Adhiwibowo">
+                            </div>
+                            <h3>Suryo Adhiwibowo, S.T., M.T., Ph.D.</h3>
+                            <p class="lecturer-role">Co-Lecturer</p>
+                            <p class="lecturer-affiliation">Telkom University, Indonesia</p>
                         </div>
-                        <h3>Suryo Adhiwibowo, S.T., M.T., Ph.D.</h3>
-                        <p class="lecturer-role">Co-Lecturer</p>
-                        <p class="lecturer-affiliation">Telkom University, Indonesia</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="cloud-computing">
+            <div class="container">
+                <div class="cloud-intro">
+                    <h2>Diving Into Cloud Computing</h2>
+                    <p>Simply put, cloud computing is about delivering computer services over the Internet. Instead of hosting on your own physical server, you use a network of remote servers to store, manage, and process data. Think of it like streaming a movie instead of owning the DVD.</p>
+                </div>
+
+                <div class="cloud-layers">
+                    <h3 class="section-subtitle">The Core Layers of the Cloud</h3>
+                    <div class="service-models-container">
+                        <div class="service-card">
+                            <div class="card-icon"><i class="fas fa-server"></i></div>
+                            <h3>Infrastructure as a Service (IaaS)</h3>
+                            <p>This is the base layer. It's like renting the land and raw materials. You get the fundamental building blocks—virtual servers, storage, networking—and you build everything else on top yourself.</p>
+                            <div class="card-examples">
+                                <strong>Examples:</strong>
+                                <ul>
+                                    <li>Amazon Web Services (AWS) EC2</li>
+                                    <li>Google Compute Engine (GCE)</li>
+                                    <li>Microsoft Azure Virtual Machines</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                            <h3>Platform as a Service (PaaS)</h3>
+                            <p>This layer gives you a ready-made environment to develop, test, and deploy your applications without worrying about the underlying infrastructure. It's like renting a workshop with all the tools included.</p>
+                            <div class="card-examples">
+                                <strong>Examples:</strong>
+                                <ul>
+                                    <li>Heroku</li>
+                                    <li>Google App Engine</li>
+                                    <li>AWS Elastic Beanstalk</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="card-icon"><i class="fas fa-cloud-arrow-down"></i></div>
+                            <h3>Software as a Service (SaaS)</h3>
+                            <p>The most common layer. This is software that's ready to use right out of the box, delivered over the web on a subscription basis. Think of it as a move-in-ready apartment—just bring your stuff and you're good to go.</p>
+                            <div class="card-examples">
+                                <strong>Examples:</strong>
+                                <ul>
+                                    <li>Google Workspace (Gmail, Docs)</li>
+                                    <li>Dropbox</li>
+                                    <li>Salesforce</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cloud-benefits">
+                    <h3 class="section-subtitle">So, Why Use the Cloud?</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
+                            <h4>Cost-Effective</h4>
+                            <p>Forget buying expensive hardware. You only pay for the resources you actually use, which is perfect for student projects or startups.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                            <h4>Scalability</h4>
+                            <p>Your app went viral overnight? The cloud lets you scale up your resources instantly to handle the traffic, and scale back down when things cool off.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <h4>Performance</h4>
+                            <p>Access cutting-edge hardware and a global network of data centers, ensuring your applications run fast for users anywhere in the world.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h4>Security</h4>
+                            <p>Cloud providers invest heavily in security, offering robust policies and controls that are often stronger than what you could build on your own.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+                            <h4>Speed & Agility</h4>
+                            <p>Need a new server or database? You can spin one up in minutes, allowing you to experiment and innovate much faster than before.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fas fa-database"></i></div>
+                            <h4>Reliability</h4>
+                            <p>With data mirrored across multiple locations, data backup and disaster recovery become much easier and more affordable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section id="team">
-            <div class="team-intro">
-                <h2>Meet the Team</h2>
-                <p>Three individuals from different backgrounds, united by a passion for technology.</p>
-            </div>
-            
-            <article class="team-member">
-                <div class="member-image">
-                    <img src="./assets/images/hilmy.jpg" alt="Photo of Hilmy Baihaqi">
+            <div class="container">
+                <div class="team-intro">
+                    <h2>Meet the Team</h2>
+                    <p>Three individuals from different backgrounds, united by a passion for technology.</p>
                 </div>
-                <div class="member-info">
-                    <h2>Hilmy Baihaqi</h2>
-                    <p class="role">Telecommunication Engineering</p>
-                    <p class="university">Telkom University, Indonesia</p>
-                    <div class="quote">
-                        "Hello there😸 I am Hilmy, a telecommunication engineering student from Telkom University. I love exploring new technologies and finding innovative solutions to real-world problems. This project was a great opportunity to collaborate with peers from different fields."
+                
+                <article class="team-member">
+                    <div class="member-image">
+                        <img src="./assets/images/hilmy.jpg" alt="Photo of Hilmy Baihaqi">
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/hilmy-baihaqi-bb4619283/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/hilmybaihaqii" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.instagram.com/hilmybaihaaqi_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <div class="member-info">
+                        <h2>Hilmy Baihaqi</h2>
+                        <p class="role">Telecommunication Engineering</p>
+                        <p class="university">Telkom University, Indonesia</p>
+                        <div class="quote">
+                            "Hello there😸 I am Hilmy, a telecommunication engineering student from Telkom University. I love exploring new technologies and finding innovative solutions to real-world problems. This project was a great opportunity to collaborate with peers from different fields."
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/hilmy-baihaqi-bb4619283/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/hilmybaihaqii" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/hilmybaihaaqi_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="team-member">
-                <div class="member-image">
-                    <img src="./assets/images/citra.jpg" alt="Photo of Citra Kusumadewi Sribawono">
-                </div>
-                <div class="member-info">
-                    <h2>Citra Kusumadewi S.</h2>
-                    <p class="role">Telecommunication Engineering</p>
-                    <p class="university">Telkom University, Indonesia</p>
-                    <div class="quote">
-                        "I believe great technology should be accessible and easy to understand. I enjoyed translating complex ideas into a clean, user-friendly design for this website."
+                <article class="team-member">
+                    <div class="member-image">
+                        <img src="./assets/images/citra.jpg" alt="Photo of Citra Kusumadewi Sribawono">
                     </div>
-                    <div class="social-links">
-                        <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <div class="member-info">
+                        <h2>Citra Kusumadewi S.</h2>
+                        <p class="role">Telecommunication Engineering</p>
+                        <p class="university">Telkom University, Indonesia</p>
+                        <div class="quote">
+                            "Hello! I'm Citra, from Telecommunication Engineering at Telkom University, Indonesia. My motivation lies in crafting user-friendly and visually appealing experiences. Really enjoyed collaborating on this project with such a great team! 😄"
+                        </div>
+                        <div class="social-links">
+                            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                </div>
-            </article>
-            
-            <article class="team-member">
-                <div class="member-image">
-                    <img src="./assets/images/es.webp" alt="Photo of Es">
-                </div>
-                <div class="member-info">
-                    <h2>Es Shahdiya Bin Es Zulkarnaen</h2>
-                    <p class="role">Software Engineering</p>
-                    <p class="university">i-CATS University College, Malaysia</p>
-                    <div class="quote">
-                        "My passion is building things that work. It was exciting to apply software engineering principles to web development and collaborate with peers from a different field."
+                </article>
+                
+                <article class="team-member">
+                    <div class="member-image">
+                        <img src="./assets/images/es.jpg" alt="Photo of Es">
                     </div>
-                    <div class="social-links">
-                        <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <div class="member-info">
+                        <h2>Es Shahdiya Bin Es Zulkarnaen</h2>
+                        <p class="role">Software Engineering</p>
+                        <p class="university">i-CATS University College, Malaysia</p>
+                        <div class="quote">
+                            "Hey there! I'm Es Shahdiya Bin Es Zulkarnaen, a Software Engineering student at i-CATS University College, Malaysia. I'm passionate about building robust and efficient software. It was a pleasure to work together on this project! 👍"
+                        </div>
+                        <div class="social-links">
+                            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </section>
         
+        <section id="find-us">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Our Home Bases</h2>
+                    <p>This collaboration connects students from two leading universities in Indonesia and Malaysia.</p>
+                </div>
+                <div class="contact-box">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.307499424366!2d107.62937531531659!3d-6.972986870221307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9adf177bf8d%3A0x437398556f9fa03!2sTelkom%20University!5e0!3m2!1sen!2sid!4v1688900452588!5m2!1sen!2sid" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="info-container">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Telkom University</span>
+                                <p>Bandung, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Website</span>
+                                <a href="https://telkomuniversity.ac.id/" target="_blank">telkomuniversity.ac.id</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">i-CATS University College</span>
+                                <p>Kuching, Malaysia</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Website</span>
+                                <a href="https://icats.edu.my/" target="_blank">icats.edu.my</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer-wrapper">
-        <div class="footer-content">
-            <p>&copy; Glow 2025 Collaboration.</p>
+        <div class="container">
+            <p>© Glow 2025 Collaboration.</p>
         </div>
     </footer>
 

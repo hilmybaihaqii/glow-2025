@@ -1,9 +1,14 @@
 /* Color & Font Variables */
 :root {
     --bg-main: #F9F7F3;
+    --bg-light: #FFFFFF;
     --text-main: #2C3E50;
+    --text-secondary: #596a7b;
     --primary-accent: #E74C3C;
     --secondary-accent: #F39C12;
+    --border-color: #EAE6DD;
+    --shadow-light: 0 8px 16px rgba(44, 62, 80, 0.07);
+    --shadow-hover: 0 15px 30px rgba(44, 62, 80, 0.12);
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Nunito Sans', sans-serif;
 }
@@ -28,17 +33,15 @@ body {
 }
 
 /* Page Width & Spacing Control */
-.navbar-wrapper, main, .footer-wrapper {
-    width: 100%;
-}
-.navbar, .hero-content, .context-content, #team, .footer-content {
+.container {
     max-width: 1100px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
+
 
 /* Decorative Blobs */
 .blob {
@@ -68,7 +71,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid #EAE6DD;
+    border-bottom: 1px solid var(--border-color);
 }
 .navbar {
     display: flex;
@@ -83,7 +86,7 @@ body {
     text-decoration: none;
 }
 .nav-logo img {
-    height: 45px; /* Ukuran logo di desktop */
+    height: 45px;
     width: auto;
 }
 .nav-menu { list-style: none; display: flex; gap: 2rem; }
@@ -104,7 +107,23 @@ main {
 section {
     padding-top: 6rem;
     padding-bottom: 6rem;
+    border-top: 1px solid var(--border-color);
 }
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+}
+.section-intro h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+}
+.section-intro p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+}
+
 
 /* Hero Section */
 #hero {
@@ -113,11 +132,11 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-bottom: none;
-    background-image: linear-gradient(rgba(249, 247, 243, 0.6), rgba(249, 247, 243, 0.6)), url('./assets/images/bg2.jpg');
+    background-image: linear-gradient(rgba(249, 247, 243, 0.4), rgba(249, 247, 243, 0.4)), url('./assets/images/bg2.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    border-top: none; 
 }
 #hero h1 {
     font-family: var(--font-heading);
@@ -129,7 +148,7 @@ section {
     font-size: clamp(1rem, 2vw, 1.15rem);
     max-width: 650px;
     margin: 0 auto;
-    color: #596a7b;
+    color: var(--text-secondary);
 }
 .underline-handdrawn {
     position: relative;
@@ -149,9 +168,7 @@ section {
 
 /* Context Section */
 #context {
-    background-color: #FFFFFF;
-    border-top: 1px solid #EAE6DD;
-    border-bottom: 1px solid #EAE6DD;
+    background-color: var(--bg-light);
 }
 .context-content {
     text-align: center;
@@ -166,7 +183,7 @@ section {
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
-    color: #596a7b;
+    color: var(--text-secondary);
     line-height: 1.8;
 }
 .context-content .guidance-text {
@@ -183,16 +200,17 @@ section {
 }
 .lecturer-card {
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 12px;
     min-width: 300px;
     text-align: center;
     background-color: var(--bg-main);
-    border: 1px solid #EAE6DD;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .lecturer-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(44, 62, 80, 0.08);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    background-color: var(--bg-light);
 }
 .lecturer-photo {
     width: 120px;
@@ -221,29 +239,93 @@ section {
 }
 .lecturer-card .lecturer-affiliation {
     font-size: 0.9rem;
-    color: #596a7b;
+    color: var(--text-secondary);
     margin-top: 0.25rem;
 }
 
+/* Cloud Computing Section */
+#cloud-computing {
+    background-color: var(--bg-main);
+}
+.cloud-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+.cloud-intro h2, .section-subtitle {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.cloud-intro p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+.service-models-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.service-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+.card-icon {
+    font-size: 3rem;
+    color: var(--primary-accent);
+    margin-bottom: 1.5rem;
+}
+.service-card h3 {
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.service-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    min-height: 140px;
+}
+.card-examples {
+    font-size: 0.9rem;
+    text-align: left;
+    color: var(--text-secondary);
+    background-color: var(--bg-main);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.card-examples strong { color: var(--text-main); }
+.card-examples ul { list-style-type: none; padding-left: 0; margin-top: 0.5rem; }
+.card-examples ul li { padding: 0.25rem 0; }
+
 /* Team Section */
 #team {
-    padding-top: 6rem;
-    border-bottom: 1px solid #EAE6DD;
+    background-color: var(--bg-light);
 }
 .team-intro {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 6rem auto;
 }
-.team-intro h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(2.2rem, 5vw, 3rem);
-    margin-bottom: 1rem;
-}
-.team-intro p {
-    font-size: 1.15rem;
-    color: #596a7b;
-}
+.team-intro h2 { font-family: var(--font-heading); font-size: clamp(2.2rem, 5vw, 3rem); margin-bottom: 1rem; }
+.team-intro p { font-size: 1.15rem; color: var(--text-secondary); }
 .team-member {
     display: flex;
     gap: 4rem;
@@ -251,86 +333,36 @@ section {
     margin-bottom: 6rem;
     padding: 2rem;
     border-radius: 12px;
+    background-color: transparent;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .team-member:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(44, 62, 80, 0.08);
-    background-color: #fff;
+    box-shadow: var(--shadow-hover);
+    background-color: var(--bg-main);
 }
-.team-member:last-child {
-    margin-bottom: 0;
-}
-.team-member:nth-child(even) {
-    flex-direction: row-reverse;
-}
-.member-image {
-    flex-shrink: 0;
-    width: 280px;
-    height: 280px;
-}
-.member-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.member-info {
-    flex: 1;
-}
-.member-info h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    margin-bottom: 0.25rem;
-}
-.member-info .role {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--primary-accent);
-    margin-bottom: 0.25rem;
-}
-.member-info .university {
-    font-size: 1rem;
-    font-style: italic;
-    color: #596a7b;
-    margin-bottom: 1.5rem;
-}
-.quote {
-    font-size: 1.05rem;
-    border-left: 3px solid var(--secondary-accent);
-    padding-left: 1.5rem;
-    color: #596a7b;
-    margin-bottom: 2rem;
-}
+.team-member:last-child { margin-bottom: 0; }
+.team-member:nth-child(even) { flex-direction: row-reverse; }
+.member-image { flex-shrink: 0; width: 280px; height: 280px; }
+.member-image img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 5px solid var(--bg-light); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.member-info { flex: 1; }
+.member-info h2 { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.25rem; }
+.member-info .role { font-size: 1.1rem; font-weight: 600; color: var(--primary-accent); margin-bottom: 0.25rem; }
+.member-info .university { font-size: 1rem; font-style: italic; color: var(--text-secondary); margin-bottom: 1.5rem; }
+.quote { font-size: 1.05rem; border-left: 3px solid var(--secondary-accent); padding-left: 1.5rem; color: var(--text-secondary); margin-bottom: 2rem; }
 
-/* Social Media Links Styling */
-.social-links {
-    display: flex;
-    gap: 1.5rem;
-}
-.social-links a {
-    color: var(--text-main);
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-.social-links a:hover {
-    color: var(--primary-accent);
-    transform: translateY(-2px);
-}
+/* Social Media Links */
+.social-links { display: flex; gap: 1.5rem; }
+.social-links a { color: var(--text-main); font-size: 1.5rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease; }
+.social-links a:hover { color: var(--primary-accent); transform: translateY(-2px); }
 
-/* Footer Styling */
+/* Footer */
 .footer-wrapper {
     background-color: var(--text-main);
     color: #ecf0f1;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem 0;
     position: relative;
     z-index: 10;
-}
-.footer-content {
     text-align: center;
 }
 
@@ -355,31 +387,109 @@ section {
     transform: translateY(20px);
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
+.scroll-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
 
-.scroll-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+/* Cloud Benefits Section */
+#cloud-computing .cloud-benefits { margin-top: 6rem; }
+.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.benefit-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.benefit-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+.benefit-icon { font-size: 2.5rem; color: var(--secondary-accent); margin-bottom: 1rem; }
+.benefit-card h4 { font-family: var(--font-body); font-size: 1.2rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.75rem; }
+.benefit-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
 
+/* FIND US SECTION - CORRECTED & RE-STYLED */
+#find-us {
+    background-color: var(--bg-main);
+}
+.contact-box {
+    background-color: var(--bg-light); /* Menggunakan warna terang yang serasi */
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden; 
+    box-shadow: var(--shadow-light);
+    transition: box-shadow 0.3s ease;
+}
+.contact-box:hover {
+    box-shadow: var(--shadow-hover);
+}
+.map-container {
+    flex-basis: 50%;
+    min-height: 450px;
+    border-right: 1px solid var(--border-color);
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.info-container {
+    flex-basis: 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem; /* Menambah jarak antar item */
+}
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.info-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-accent); /* Menggunakan warna aksen utama */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+}
+.info-text .info-label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary); /* Menggunakan warna teks sekunder */
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+.info-text p, .info-text a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main); /* Menggunakan warna teks utama */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.info-text a:hover {
+    color: var(--primary-accent); /* Efek hover yang konsisten */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container { padding-left: 1rem; padding-right: 1rem; }
     section { padding-top: 4rem; padding-bottom: 4rem; }
     #hero { min-height: 90vh; }
     .navbar { height: 60px; }
     .nav-menu { position: fixed; left: -100%; top: 60px; flex-direction: column; background-color: var(--bg-main); width: 100%; height: 100vh; text-align: center; transition: 0.3s; gap: 0; z-index: 999; }
     .nav-menu.active { left: 0; }
-    .nav-item { padding: 1.5rem 0; border-bottom: 1px solid #EAE6DD; }
+    .nav-item { padding: 1.5rem 0; border-bottom: 1px solid var(--border-color); }
     .hamburger { display: block; }
     .hamburger.active .bar:nth-child(2) { opacity: 0; }
     .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-    /* PERBAIKAN LOGO UNTUK MOBILE */
-    .nav-logo img {
-        height: 40px;
-    }
+    .nav-logo img { height: 40px; }
     
     .team-member,
     .team-member:nth-child(even) {
@@ -388,16 +498,30 @@ section {
         text-align: center;
         padding: 1.5rem;
     }
-    .member-image {
-        width: 200px;
-        height: 200px;
-    }
+    .member-image { width: 200px; height: 200px; }
     .member-info { text-align: center; }
     .quote { border-left: none; border-top: 3px solid var(--secondary-accent); padding-left: 0; padding-top: 1rem; }
     .social-links { justify-content: center; }
 
-    .lecturers {
+    .lecturers { flex-direction: column; align-items: center; }
+    .service-card p { min-height: auto; }
+    
+    .section-subtitle { margin-bottom: 2rem; }
+    #cloud-computing .cloud-layers,
+    #cloud-computing .cloud-benefits { margin-top: 4rem; }
+
+    /* Find Us Responsive Corrected */
+    .contact-box {
         flex-direction: column;
-        align-items: center;
+    }
+    .map-container {
+        flex-basis: auto; 
+        height: 300px;
+        min-height: auto;
+        border-right: none; /* Hapus border di mobile */
+        border-bottom: 1px solid var(--border-color); /* Pindahkan border ke bawah */
+    }
+    .info-container {
+        padding: 2rem 1.5rem; /* Sesuaikan padding untuk mobile */
     }
 }

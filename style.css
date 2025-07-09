@@ -43,35 +43,81 @@ body {
 }
 
 
-/* Decorative Blobs */
+/* Decorative Blobs - UPDATED SECTION */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-25px) rotate(15deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
 .blob {
     position: absolute;
     opacity: 0.15;
     z-index: -1;
     pointer-events: none;
+    animation: float 15s ease-in-out infinite;
 }
+
 .blob1 {
     width: 600px;
     height: 600px;
     top: 5vh;
     left: -150px;
+    animation-duration: 18s;
 }
+
 .blob2 {
-    width: 700px;
-    height: 700px;
-    bottom: 50vh;
-    right: -200px;
+    width: 600px;
+    height: 600px;
+    top: 25vh;      /* Diubah dari bottom ke top */
+    right: -150px;  /* Sedikit digeser agar lebih terlihat */
+    animation-delay: 3s;
+    animation-duration: 20s;
+}
+
+.blob3 {
+    width: 550px;
+    height: 550px;
+    top: 60vh;
+    left: -100px;
+    animation-delay: 5s;
+    animation-duration: 22s;
+}
+
+.blob4 {
+    width: 450px;
+    height: 450px;
+    top: -20vh;
+    right: 5vw;
+    animation-delay: 1s;
+    animation-duration: 16s;
+}
+
+.blob5 {
+    width: 550px;    /* Ukuran sedikit disesuaikan */
+    height: 550px;
+    bottom: -10vh;   /* Jarak dari bawah dikurangi drastis */
+    right: -10vw;    /* Jarak dari kanan dikurangi drastis */
+    opacity: 0.15;   /* Opacity disamakan agar serasi */
+    animation-delay: 2s;
+    animation-duration: 25s;
+    animation-direction: alternate;
 }
 
 /* Navbar */
 .navbar-wrapper {
-    background-color: rgba(249, 247, 243, 0.85);
+    background-color: rgba(249, 247, 243, 0);
     backdrop-filter: blur(8px);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
 }
 .navbar {
     display: flex;
@@ -132,7 +178,6 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(rgba(249, 247, 243, 0.4), rgba(249, 247, 243, 0.4)), url('./assets/images/bg2.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -410,7 +455,7 @@ section {
     background-color: var(--bg-main);
 }
 .contact-box {
-    background-color: var(--bg-light); /* Menggunakan warna terang yang serasi */
+    background-color: var(--bg-light);
     border: 1px solid var(--border-color);
     border-radius: 20px;
     display: flex;
@@ -437,7 +482,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2.5rem; /* Menambah jarak antar item */
+    gap: 2.5rem;
 }
 .info-item {
     display: flex;
@@ -448,7 +493,7 @@ section {
     flex-shrink: 0;
     width: 50px;
     height: 50px;
-    background-color: var(--primary-accent); /* Menggunakan warna aksen utama */
+    background-color: var(--primary-accent);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -461,19 +506,19 @@ section {
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--text-secondary); /* Menggunakan warna teks sekunder */
+    color: var(--text-secondary);
     letter-spacing: 0.5px;
     margin-bottom: 0.25rem;
 }
 .info-text p, .info-text a {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--text-main); /* Menggunakan warna teks utama */
+    color: var(--text-main);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 .info-text a:hover {
-    color: var(--primary-accent); /* Efek hover yang konsisten */
+    color: var(--primary-accent);
 }
 
 /* Responsive Design */
@@ -510,7 +555,6 @@ section {
     #cloud-computing .cloud-layers,
     #cloud-computing .cloud-benefits { margin-top: 4rem; }
 
-    /* Find Us Responsive Corrected */
     .contact-box {
         flex-direction: column;
     }
@@ -518,10 +562,10 @@ section {
         flex-basis: auto; 
         height: 300px;
         min-height: auto;
-        border-right: none; /* Hapus border di mobile */
-        border-bottom: 1px solid var(--border-color); /* Pindahkan border ke bawah */
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
     }
     .info-container {
-        padding: 2rem 1.5rem; /* Sesuaikan padding untuk mobile */
+        padding: 2rem 1.5rem; 
     }
 }

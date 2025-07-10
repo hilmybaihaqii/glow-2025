@@ -52,7 +52,7 @@ This project is a collaboration of three talented students:
 | :------------------------------ | :------------------------- | :------------------------------ | :------------------------------------------------ |
 | <img src="assets/images/hilmy.jpg" width="150"> | **Hilmy Baihaqi** | Telkom University, Indonesia    | [hilmybaihaqii](https://github.com/hilmybaihaqii) |
 | <img src="assets/images/citra.jpg" width="150"> | **Citra Kusumadewi S.** | Telkom University, Indonesia    | [citraakusumadewi](https://github.com/citraakusumadewi) |
-| <img src="assets/images/es.jpg" width="150"> | **Es Shahdiya Bin Es Z.** | i-CATS University College, Malaysia | ([Reign2308](https://github.com/Reign2308) |
+| <img src="assets/images/es.jpg" width="150"> | **Es Shahdiya Bin Es Z.** | i-CATS University College, Malaysia | [Reign2308](https://github.com/Reign2308) |
 
 <br>
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Quiz - Our Team's Story</title>
+    <link rel="icon" href="./assets/images/logo.png" type="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar-wrapper">
+        <nav class="navbar container">
+            <a href="index.html#hero" class="nav-logo">
+                <img src="./assets/images/logo.png" alt="Our Team's Story Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html#hero" class="nav-link">Start</a></li>
+                <li class="nav-item"><a href="index.html#context" class="nav-link">Context</a></li>
+                <li class="nav-item"><a href="index.html#cloud-computing" class="nav-link">Cloud</a></li>
+                <li class="nav-item"><a href="quiz.html" class="nav-link active">Quiz</a></li>
+                <li class="nav-item"><a href="index.html#team" class="nav-link">The Team</a></li>
+                <li class="nav-item"><a href="index.html#find-us" class="nav-link">Find Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+
+        <section id="quiz">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Test Your Knowledge</h2>
+                    <p>Let's see how much you know about Cloud Computing. Good luck!</p>
+                </div>
+
+                <div class="quiz-wrapper" id="quiz-wrapper">
+                    <div class="quiz-header">
+                        <div class="quiz-progress">
+                            <div class="progress-text">
+                                Question <span id="question-current">1</span> of <span id="question-total">5</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="quiz-content" class="quiz-content">
+                        <h3 id="question-text">Loading question...</h3>
+                        <div id="answer-options" class="answer-options">
+                            </div>
+                        <div id="explanation-text" class="explanation-text"></div>
+                    </div>
+
+                    <div id="quiz-controls" class="quiz-controls">
+                        <button id="next-btn" class="quiz-btn" style="display: none;">Next Question</button>
+                    </div>
+                </div>
+
+                <div id="results-container" class="quiz-wrapper results-wrapper" style="display: none;">
+                    <h2>Quiz Complete!</h2>
+                    <div class="results-score">
+                        <p>Your Score:</p>
+                        <div class="score-circle" id="score-circle">0%</div>
+                        <p>You answered <strong id="score-correct">0</strong> out of <strong id="score-total">0</strong> questions correctly.</p>
+                    </div>
+                    <div class="results-feedback" id="results-feedback"></div>
+                    <button id="retry-btn" class="quiz-btn">Try Again</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Our Universities</h3>
+                    <ul class="footer-contact-info">
+                        <li><i class="fas fa-university"></i><div><strong>Telkom University</strong><br>Bandung, Indonesia</div></li>
+                        <li><i class="fas fa-university"></i><div><strong>i-CATS University College</strong><br>Kuching, Malaysia</div></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About This Project</h3>
+                    <p>This website is a final project for the <strong>Glow 2025</strong> international program, created by a collaborative team of students from Indonesia and Malaysia.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 | A Collaborative Project by Hilmy, Citra & Es for the Glow 2025 Program.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

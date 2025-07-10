@@ -10,6 +10,7 @@ An introductory landing page created by three students from Indonesia and Malays
 
 ## 🖼️ Project Preview
 
+![Project Screenshot](assets/images/preview.png)
 
 <br>
 
@@ -49,9 +50,9 @@ This project is a collaboration of three talented students:
 
 | Photo                           | Name                       | University                     | GitHub                                           |
 | :------------------------------ | :------------------------- | :------------------------------ | :------------------------------------------------ |
-| `[Photo of Hilmy]`<br/>*(Replace)* | **Hilmy Baihaqi** | Telkom University, Indonesia    | [@hilmybaihaqii](https://github.com/hilmybaihaqii) |
-| `[Photo of Citra]`<br/>*(Replace)* | **Citra Kusumadewi S.** | Telkom University, Indonesia    | *(Add Citra's GitHub link)* |
-| `[Photo of Es]`<br/>*(Replace)* | **Es Shahdiya Bin Es Z.** | i-CATS University College, Malaysia | *(Add Es's GitHub link)* |
+| <img src="assets/images/hilmy.jpg" width="150"> | **Hilmy Baihaqi** | Telkom University, Indonesia    | [@hilmybaihaqii](https://github.com/hilmybaihaqii) |
+| <img src="assets/images/citra.jpg" width="150"> | **Citra Kusumadewi S.** | Telkom University, Indonesia    | *(Add Citra's GitHub link)* |
+| <img src="assets/images/es.jpg" width="150"> | **Es Shahdiya Bin Es Z.** | i-CATS University College, Malaysia | *(Add Es's GitHub link)* |
 
 <br>
 

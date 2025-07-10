@@ -80,4 +80,3 @@ Want to see this code in action on your computer? Follow these steps:
 3.  **Open the `index.html` file** in your favorite browser.
 
 ---
-*© 2025 | Made with ❤️ by Hilmy, Citra & Es for the Glow 2025 Program.*
